@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: onboarding
+  description: A workflow for onboarding applications to OCP cluster
+  annotations:
+    argocd/app-selector: rht-gitops.com/janus-argocd=onboarding
+    backstage.io/kubernetes-namespace: orchestrator-gitops
+    backstage.io/kubernetes-id: onboarding-ci
+    janus-idp.io/tekton: onboarding
+    github.com/project-slug: gabriel-farache/onboardingBBBBBBBBBBBBBBBB
+spec:
+  type: workflow-project
+  system: system:default/janus-orchestrator
+  lifecycle: development
+  owner: user:default/gabriel-farache
